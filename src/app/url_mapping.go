@@ -1,15 +1,9 @@
 package app
 
 import (
-	"net/http"
-
-	"github.com/gin-gonic/gin"
+	"github.com/preet3001/shop_easy_backend/src/controllers/ping_controller"
 )
 
 func mapUrls(){
-	router.GET("/ping", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{
-		  "message": "pong",
-		})
-	  })
+	router.GET("/ping",pingcontroller.Ping)
 }
